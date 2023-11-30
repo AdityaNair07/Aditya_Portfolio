@@ -203,6 +203,11 @@ html {
   list-style-type: none;
   line-height: 2;
 }
+.skillset li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .project {
   display: flex;
   flex-direction: column;
