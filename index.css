@@ -97,6 +97,9 @@ html {
   width: 60%;
   margin: 0 auto;
 }
+#tagline a {
+  text-decoration: none;
+}
 #portfolio {
   width: 80%;
   padding: 2% 10%;
