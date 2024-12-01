@@ -93,7 +93,7 @@ html {
   text-align: center;
 }
 #tagline {
-  font-size: 50px;
+  font-size: 40px;
   width: 60%;
   margin: 0 auto;
 }
@@ -124,6 +124,9 @@ html {
 #projects {
   margin: 4vh 0px !important;
   padding: 2vh 0px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 #projects a {
   text-decoration: none;
@@ -208,13 +211,45 @@ html {
   align-items: center;
   gap: 20px;
 }
-.project {
+.experience {
   display: flex;
   flex-direction: column;
 }
-.project div {
+.experience div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
   font-weight: normal;
 }
+.project {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+  gap: 30px;
+  overflow: hidden;
+}
+.project div {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  align-items: start;
+  gap: 30px;
+}
+.more-projects div {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+}
+
 #details {
   margin: 6vh 0px;
 }
@@ -232,6 +267,13 @@ html {
   background: #fff;
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .project {
+    grid-template-columns: repeat(1, minmax(100%, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   #header {
     width: 94%;
@@ -275,7 +317,12 @@ html {
     margin: 10px;
     padding: 10px 11px;
   }
+
+  .more-projects {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
 }
+
 #footer {
   width: 100%;
   padding: 10vh 0px;
